@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Atraente</title>
+
+    <!-- Fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* ---- Variáveis de cores ---- */
+        :root {
+            --cor-primaria: #2C3E50;
+            --cor-secundaria: #3498DB;
+            --cor-fundo: #F4F7FA;
+            --cor-texto: #333;
+            --cor-branco: #fff;
+        }
+
+        /* ---- Reset básico ---- */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; background: var(--cor-fundo); color: var(--cor-texto); line-height: 1.6; }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* ---- Layout geral ---- */
+        header { background: var(--cor-primaria); color: var(--cor-branco); padding: 1rem 2rem; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.5rem; }
+
+        nav ul { list-style: none; display: flex; gap: 1.5rem; }
+        nav a { color: var(--cor-branco); font-weight: 500; transition: opacity .2s; }
+        nav a:hover { opacity: .8; }
+
+        /* ---- Hero ---- */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80')
+                        center/cover no-repeat;
+            color: var(--cor-branco);
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        .hero::before {
+            content:""; position:absolute; inset:0;
+            background:rgba(0,0,0,.5);
+        }
+        .hero-content { position:relative; z-index:1; max-width:800px; margin:auto; }
+        .hero h1 { font-family:'Montserrat',sans-serif; font-size:2.8rem; margin-bottom:.5rem; }
+        .hero p { font-size:1.2rem; margin-bottom:1.5rem; }
+        .hero button {
+            background:#e74c3c; border:none; padding:.8rem 1.5rem;
+            color:#fff; font-size:1rem; cursor:pointer;
+            border-radius:.3rem; transition:.3s;
+        }
+        .hero button:hover { background:#c0392b; }
+
+        /* ---- Seções ---- */
+        section { padding:4rem 2rem; max-width:1100px; margin:auto; }
+        .section-title {
+            text-align:center; margin-bottom:2rem;
+            font-family:'Montserrat',sans-serif;
+            color:#2c3e50;
+        }
+
+        .grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:2rem;
+        }
+        .card {
+            background:#fff; border-radius:.5rem; overflow:hidden;
+            box-shadow:0 2px 8px rgba(0,0,0,.1);
+            transition:.3s;
+        }
+        .card:hover { transform translateY(-5px); box-shadow:0 4px 12px rgba(0,0,0,.15); }
+        .card img { width:100%; height:auto; }
+        .card-body { padding:.8rem 1rem; }
+        .card-body h3 { margin:.5rem 0; font-family:'Montserrat',sans-serif; }
+        .card-body p { font-size:.9rem; color:#555; }
+
+        /* ---- Formulário de contato ---- */
+        .contact-form {
+            display:flex;
+            flex-direction:column;
+            gap:.8rem;
+            max-width:600px;
+            margin:auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding:.8rem;
+            border:none;
+            border-radius:.3rem;
+            background:#eaeff2;
+            font-family:'Roboto',sans-serif;
+            resize:none;
+        }
+        .contact-form button {
+            align-self:flex-start;
+            background:#3498db;
+            color:#fff;
+            border:none;
+            padding:.8rem 1.5rem;
+            border-radius:.3rem;
+            cursor:pointer;
+            transition:.3s;
+        }
+        .contact-form button:hover { background:#2980b9; }
+
+        /* ---- Footer ---- */
+        footer {
+            background:#2c3e50;
+            color:#ddd;
+            text-align:center;
+            padding:.8rem 2rem;
+            font-size:.9rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MinhaMarca</div>
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Bem‑vindo à Experiência Digital</h1>
+        <p>Design moderno, código limpo e performance impecável.</p>
+        <button>Saiba Mais</button>
+    </div>
+</section>
+
+<section id="sobre">
+    <h2 class="section-title">Sobre Nós</h2>
+    <p style="max-width:800px;margin:auto;text-align:center;">
+       Somos uma equipe apaixonada por criar soluções web elegantes e funcionais.
+       Cada projeto é pensado para encantar usuários e gerar resultados reais.
+    </p>
+</section>
+
+<section id="servicos">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502880197276-bd9f6d4e9b33?auto=format&fit=crop&w=400&q=80" alt="Web Design">
+            <div class="card-body">
+                <h3>Web Design</h3>
+                <p>Layouts criativos e responsivos que se adaptam a qualquer dispositivo.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Desenvolvimento">
+            <div class="card-body">
+                <h3>Desenvolvimento</h3>
+                <p>Código limpo e otimizado em HTML, CSS e JavaScript puro.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1531497865147-7f6d7f271e79?auto=format&fit=crop&w=400&q=80" alt="SEO">
+            <div class="card-body">
+                <h3>SEO & Marketing</h3>
+                <p>Estratégias que aumentam visibilidade e tráfego orgânico.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contato">
+    <h2 class="section-title">Fale Conosco</h2>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="E‑mail" required>
+  </section>
+</body>
+</html>
