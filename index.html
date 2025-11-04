@@ -138,7 +138,12 @@
     <div class="hero-content">
         <h1>Bem‑vindo à Experiência Digital</h1>
         <p>Design moderno, código limpo e performance impecável.</p>
-        <button>Saiba Mais</button>
+        <button class="learn_more">Saiba Mais</button>
+        <script>
+            document.querySelector(".learn_more").addEventListener("click", () => {
+                console.log("Button clicked!");
+            });
+        </script>
     </div>
 </section>
 
@@ -187,4 +192,5 @@
       <input type="email" name="email" placeholder="E‑mail" required>
   </section>
 </body>
+
 </html>
