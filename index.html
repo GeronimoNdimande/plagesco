@@ -189,7 +189,7 @@
 </body>
 <script>
     let edutype = sessionStorage.getItem('edutype');
-    if(!edutype){
+    if(sessionStorage.length <= 0){
         document.textContent = "<div><p>Indique o tipo de ensino</p></div>";
     }
 </script>
